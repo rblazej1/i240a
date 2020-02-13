@@ -1,0 +1,1443 @@
+Script started on 2020-02-13 13:14:31-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+bash: /home/umrigar/cs240/bin/student.rc: Permission denied
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3$ cd exercs[Kises
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ gei[Kdit . gitif[Kgnore
+
+(gedit:327965): Gtk-[1;33mWARNING[0m **: [34m13:14:56.857[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 1-gr eet
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ ls -l
+total 8
+-rw-r--r-- 1 rblazej1 rblazej1 717 Feb 13 13:13 greet.cc
+-rw-r--r-- 1 rblazej1 rblazej1  54 Feb 13 13:13 README
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ -f ...[K/Makefile
+bash: -f: command not found
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ -f ../Makefile[1@m[1@a[1@k[1@e[1@ 
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ ./greet
+usage: ./greet NAME...
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ ./greet bart lisa
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ gedit greet.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/1-greet$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 2-gr eet
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make
+make: *** No targets specified and no makefile found.  Stop.
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ ls
+greet.cc  README
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ ./greet bart lisa
+hello bart
+hello lisa
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ galgrind[K[K[K[K[K[K[K[Kvalgrind ./greet lisa bart
+==328489== Memcheck, a memory error detector
+==328489== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==328489== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==328489== Command: ./greet lisa bart
+==328489== 
+hello lisa
+hello bart
+==328489== 
+==328489== HEAP SUMMARY:
+==328489==     in use at exit: 22 bytes in 2 blocks
+==328489==   total heap usage: 4 allocs, 2 frees, 73,750 bytes allocated
+==328489== 
+==328489== LEAK SUMMARY:
+==328489==    definitely lost: 22 bytes in 2 blocks
+==328489==    indirectly lost: 0 bytes in 0 blocks
+==328489==      possibly lost: 0 bytes in 0 blocks
+==328489==    still reachable: 0 bytes in 0 blocks
+==328489==         suppressed: 0 bytes in 0 blocks
+==328489== Rerun with --leak-check=full to see details of leaked memory
+==328489== 
+==328489== For counts of detected and suppressed errors, rerun with: -v
+==328489== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc
+
+(gedit:328524): Gtk-[1;33mWARNING[0m **: [34m13:20:17.546[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[9P./greet bart lisa[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==328697== Memcheck, a memory error detector
+==328697== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==328697== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==328697== Command: ./greet lisa bart
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x4838CC2: __strlen_sse2 (vg_replace_strmem.c:462)
+==328697==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x4838CD4: __strlen_sse2 (vg_replace_strmem.c:462)
+==328697==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d74c81 is 1 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x4C1A847: _IO_default_xsputn (genops.c:399)
+==328697==    by 0x4C1A847: _IO_default_xsputn (genops.c:370)
+==328697==    by 0x4C18AD0: _IO_new_file_xsputn (fileops.c:1272)
+==328697==    by 0x4C18AD0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==328697==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==328697==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+hello lisa
+==328697== Invalid read of size 1
+==328697==    at 0x4C18A25: _IO_new_file_xsputn (fileops.c:1226)
+==328697==    by 0x4C18A25: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==328697==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==328697==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d75119 is 9 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x4C18A3C: _IO_new_file_xsputn (fileops.c:1226)
+==328697==    by 0x4C18A3C: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==328697==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==328697==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d75118 is 8 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x483D528: mempcpy (vg_replace_strmem.c:1536)
+==328697==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==328697==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==328697==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==328697==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d75110 is 0 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+==328697== Invalid read of size 1
+==328697==    at 0x483D536: mempcpy (vg_replace_strmem.c:1536)
+==328697==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==328697==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==328697==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==328697==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==328697==    by 0x1092FA: main (greet.cc:26)
+==328697==  Address 0x4d75112 is 2 bytes inside a block of size 11 free'd
+==328697==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328697==    by 0x10924C: greetMsg(char const*) (greet.cc:13)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697==  Block was alloc'd at
+==328697==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==328697==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==328697==    by 0x1092EB: main (greet.cc:26)
+==328697== 
+hello bart
+==328697== 
+==328697== HEAP SUMMARY:
+==328697==     in use at exit: 0 bytes in 0 blocks
+==328697==   total heap usage: 4 allocs, 4 frees, 73,750 bytes allocated
+==328697== 
+==328697== All heap blocks were freed -- no leaks are possible
+==328697== 
+==328697== For counts of detected and suppressed errors, rerun with: -v
+==328697== ERROR SUMMARY: 52 errors from 7 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:328714): Gtk-[1;33mWARNING[0m **: [34m13:20:58.951[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==328887== Memcheck, a memory error detector
+==328887== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==328887== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==328887== Command: ./greet lisa bart
+==328887== 
+hello lisa
+hello bart
+==328887== Invalid free() / delete / delete[] / realloc()
+==328887==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==328887==    by 0x109315: main (greet.cc:27)
+==328887==  Address 0x1fff0006e8 is on thread 1's stack
+==328887== 
+==328887== 
+==328887== HEAP SUMMARY:
+==328887==     in use at exit: 22 bytes in 2 blocks
+==328887==   total heap usage: 4 allocs, 3 frees, 73,750 bytes allocated
+==328887== 
+==328887== LEAK SUMMARY:
+==328887==    definitely lost: 22 bytes in 2 blocks
+==328887==    indirectly lost: 0 bytes in 0 blocks
+==328887==      possibly lost: 0 bytes in 0 blocks
+==328887==    still reachable: 0 bytes in 0 blocks
+==328887==         suppressed: 0 bytes in 0 blocks
+==328887== Rerun with --leak-check=full to see details of leaked memory
+==328887== 
+==328887== For counts of detected and suppressed errors, rerun with: -v
+==328887== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:328961): Gtk-[1;33mWARNING[0m **: [34m13:23:03.002[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==329034== Memcheck, a memory error detector
+==329034== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==329034== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==329034== Command: ./greet lisa bart
+==329034== 
+hello lisa
+==329034== Invalid free() / delete / delete[] / realloc()
+==329034==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==329034==    by 0x10930F: main (greet.cc:26)
+==329034==  Address 0x1fff0006e8 is on thread 1's stack
+==329034== 
+hello bart
+==329034== 
+==329034== HEAP SUMMARY:
+==329034==     in use at exit: 22 bytes in 2 blocks
+==329034==   total heap usage: 4 allocs, 4 frees, 73,750 bytes allocated
+==329034== 
+==329034== LEAK SUMMARY:
+==329034==    definitely lost: 22 bytes in 2 blocks
+==329034==    indirectly lost: 0 bytes in 0 blocks
+==329034==      possibly lost: 0 bytes in 0 blocks
+==329034==    still reachable: 0 bytes in 0 blocks
+==329034==         suppressed: 0 bytes in 0 blocks
+==329034== Rerun with --leak-check=full to see details of leaked memory
+==329034== 
+==329034== For counts of detected and suppressed errors, rerun with: -v
+==329034== ERROR SUMMARY: 2 errors from 1 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:329191): Gtk-[1;33mWARNING[0m **: [34m13:25:12.505[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==329297== Memcheck, a memory error detector
+==329297== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==329297== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==329297== Command: ./greet lisa bart
+==329297== 
+hello lisa
+hello bart
+==329297== 
+==329297== HEAP SUMMARY:
+==329297==     in use at exit: 22 bytes in 2 blocks
+==329297==   total heap usage: 4 allocs, 2 frees, 73,750 bytes allocated
+==329297== 
+==329297== LEAK SUMMARY:
+==329297==    definitely lost: 22 bytes in 2 blocks
+==329297==    indirectly lost: 0 bytes in 0 blocks
+==329297==      possibly lost: 0 bytes in 0 blocks
+==329297==    still reachable: 0 bytes in 0 blocks
+==329297==         suppressed: 0 bytes in 0 blocks
+==329297== Rerun with --leak-check=full to see details of leaked memory
+==329297== 
+==329297== For counts of detected and suppressed errors, rerun with: -v
+==329297== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:329363): Gtk-[1;33mWARNING[0m **: [34m13:26:16.668[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kconst char* greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:13:13:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[Kchar[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+   delete[] *[01;31m[Kmsg[m[K;
+             [01;31m[K^~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[Kmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:329491): Gtk-[1;33mWARNING[0m **: [34m13:27:25.496[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==329559== Memcheck, a memory error detector
+==329559== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==329559== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==329559== Command: ./greet lisa bart
+==329559== 
+hello lisa
+==329559== Invalid free() / delete / delete[] / realloc()
+==329559==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==329559==    by 0x109317: main (greet.cc:26)
+==329559==  Address 0x1fff0009d3 is on thread 1's stack
+==329559== 
+hello bart
+==329559== 
+==329559== HEAP SUMMARY:
+==329559==     in use at exit: 22 bytes in 2 blocks
+==329559==   total heap usage: 4 allocs, 4 frees, 73,750 bytes allocated
+==329559== 
+==329559== LEAK SUMMARY:
+==329559==    definitely lost: 22 bytes in 2 blocks
+==329559==    indirectly lost: 0 bytes in 0 blocks
+==329559==      possibly lost: 0 bytes in 0 blocks
+==329559==    still reachable: 0 bytes in 0 blocks
+==329559==         suppressed: 0 bytes in 0 blocks
+==329559== Rerun with --leak-check=full to see details of leaked memory
+==329559== 
+==329559== For counts of detected and suppressed errors, rerun with: -v
+==329559== ERROR SUMMARY: 2 errors from 1 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:329601): Gtk-[1;33mWARNING[0m **: [34m13:29:20.765[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[Kgreet.cc:26:23:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[Kconst char[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+       delete[] *argv[i[01;31m[K][m[K;
+                       [01;31m[K^[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ d[Kcd 3-gr eet
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ cd 3-greet[C[C[C[C..[K[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ ./greet bart lisa
+ing::replacebart
+ing::replacelisa
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greeti[K.cc
+
+(gedit:330099): Gtk-[1;33mWARNING[0m **: [34m13:33:42.488[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[C./greet bart lisa[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[5Pgedit greet.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[C./greet bart lisa
+hello bart
+hello lisa
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ ./greet bart lisa[C[3Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[C./greet bart lisa[Cmake -f ../Makefile[C[9Pcd 3-greet[C[C[C[C..[K[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile[Cvalgrind ./greet lisa bart
+==330329== Memcheck, a memory error detector
+==330329== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==330329== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==330329== Command: ./greet lisa bart
+==330329== 
+hello lisa
+hello bart
+==330329== 
+==330329== HEAP SUMMARY:
+==330329==     in use at exit: 0 bytes in 0 blocks
+==330329==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==330329== 
+==330329== All heap blocks were freed -- no leaks are possible
+==330329== 
+==330329== For counts of detected and suppressed errors, rerun with: -v
+==330329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ valgrind ./greet lisa bart[C[9P./greet bart lisa[C[3Pgedit greet.cc
+
+(gedit:330363): Gtk-[1;33mWARNING[0m **: [34m13:34:54.533[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[9P./greet bart lisa[C[3Pgedit greet.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[9P./greet bart lisa[C[3Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kstd::__cxx11::string greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:10:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+   [01;31m[Kcout[m[K << sizeof(std::string(GREET) + ' ' + std::string(name));
+   [01;31m[K^~~~[m[K
+[01m[Kgreet.cc:10:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kgreet.cc:1[m[K:
+[01m[K/usr/include/c++/8/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[Kmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:330514): Gtk-[1;33mWARNING[0m **: [34m13:36:01.746[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kstd::__cxx11::string greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:10:10:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Klong unsigned int[m[K’ to ‘[01m[Kconst char*[m[K’ [[01;31m[K-fpermissive[m[K]
+   printf([01;31m[Ksizeof(std::string(GREET) + ' ' + std::string(name))[m[K);
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/8/cstdio:42[m[K,
+                 from [01m[K/usr/include/c++/8/ext/string_conversions.h:43[m[K,
+                 from [01m[K/usr/include/c++/8/bits/basic_string.h:6400[m[K,
+                 from [01m[K/usr/include/c++/8/string:52[m[K,
+                 from [01m[K/usr/include/c++/8/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/8/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/8/ios:42[m[K,
+                 from [01m[K/usr/include/c++/8/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[Kgreet.cc:1[m[K:
+[01m[K/usr/include/stdio.h:332:43:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint printf(const char*, ...)[m[K’
+ extern int printf ([01;36m[Kconst char *__restrict __format[m[K, ...);
+                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:330582): Gtk-[1;33mWARNING[0m **: [34m13:37:10.556[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:330733): Gtk-[1;33mWARNING[0m **: [34m13:37:46.888[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kstd::__cxx11::string greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:10:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope
+   [01;31m[Kcout[m[K << sizeof(std::string(GREET) + ' ' + std::string(name)));
+   [01;31m[K^~~~[m[K
+[01m[Kgreet.cc:10:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[Kgreet.cc:1[m[K:
+[01m[K/usr/include/c++/8/iostream:61:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::cout[m[K’
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:330823): Gtk-[1;33mWARNING[0m **: [34m13:38:46.953[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kstd::__cxx11::string greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:12:63:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   cout << sizeof(std::string(GREET) + ' ' + std::string(name))[01;31m[K)[m[K;
+                                                               [01;31m[K^[m[K
+                                                               [32m[K;[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:330906): Gtk-[1;33mWARNING[0m **: [34m13:39:12.684[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ gedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==330979== Memcheck, a memory error detector
+==330979== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==330979== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==330979== Command: ./greet lisa bart
+==330979== 
+32hello lisa
+32hello bart
+==330979== 
+==330979== HEAP SUMMARY:
+==330979==     in use at exit: 0 bytes in 0 blocks
+==330979==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==330979== 
+==330979== All heap blocks were freed -- no leaks are possible
+==330979== 
+==330979== For counts of detected and suppressed errors, rerun with: -v
+==330979== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ valgrind ./greet lisa bart[C[K./greet ryanblazee[Kjewski
+32hello ryanblazejewski
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ .gret[K[K[K[K/ree[K[K[Kgreet abcdefghijklmnopqrstuvwxyz
+32hello abcdefghijklmnopqrstuvwxyz
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/3-greet$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 4-so rtnums
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ls -l
+total 12
+-rw-r--r-- 1 rblazej1 rblazej1  82 Feb 13 13:13 nums1.dat
+-rw-r--r-- 1 rblazej1 rblazej1 109 Feb 13 13:13 nums2.dat
+-rw-r--r-- 1 rblazej1 rblazej1 998 Feb 13 13:13 sortnums.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./[K[Kmake
+make: *** No targets specified and no makefile found.  Stop.
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+cat </dev/null >.gitignore
+for t in sortnums; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums
+usage: ./sortnums FILE...
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums nums1
+cannot read "nums1"
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums nums1.dat
+10
+10
+10
+20
+20
+20
+30
+30
+30
+40
+40
+40
+50
+50
+50
+60
+60
+60
+70
+70
+70
+80
+80
+80
+90
+90
+90
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums nums1.dat[K.dat[C[C[C[C[Kgedit[K[K[K[K[K./sortnums nums1.dat21.dat[1P1.dat[C[1P.dat2.dat
+100
+100
+100
+200
+200
+200
+300
+300
+300
+400
+400
+400
+500
+500
+500
+600
+600
+600
+700
+700
+700
+800
+800
+800
+900
+900
+900
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums
+Killed
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.c [Kc
+
+(gedit:331437): Gtk-[1;33mWARNING[0m **: [34m13:44:20.502[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[K[C[C[C[C./sortnums nums2.dat1.dat[K[K[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:40:39:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kbool comp(const int&, const int&)[m[K’
+   sort(nums.begin(), nums.end(), comp([01;31m[K)[m[K);
+                                       [01;31m[K^[m[K
+[01m[Ksortnums.cc:39:8:[m[K [01;36m[Knote: [m[Kdeclared here
+   bool [01;36m[Kcomp[m[K(const int &a, const int &b);
+        [01;36m[K^~~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:331925): Gtk-[1;33mWARNING[0m **: [34m13:48:12.825[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:40:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+   sort(nums.begin(), nums.end(), comp([01;31m[Kconst[m[K int &a, const int &b));
+                                       [01;31m[K^~~~~[m[K
+[01m[Ksortnums.cc:40:53:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+   sort(nums.begin(), nums.end(), comp(const int &a, [01;31m[Kconst[m[K int &b));
+                                                     [01;31m[K^~~~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:332032): Gtk-[1;33mWARNING[0m **: [34m13:48:27.563[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:40:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+   sort(nums.begin(), nums.end(), comp([01;31m[Kint[m[K &a, int &b));
+                                       [01;31m[K^~~[m[K
+[01m[Ksortnums.cc:40:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+   sort(nums.begin(), nums.end(), comp(int &a, [01;31m[Kint[m[K &b));
+                                               [01;31m[K^~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:332073): Gtk-[1;33mWARNING[0m **: [34m13:48:48.931[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:40:39:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar**[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   sort(nums.begin(), nums.end(), comp([01;31m[K&argv[1][m[K, &argv[argc]));
+                                       [01;31m[K^~~~~~~~[m[K
+[01m[Ksortnums.cc:39:24:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool comp(const int&, const int&)[m[K’
+   bool comp([01;36m[Kconst int &a[m[K, const int &b);
+             [01;36m[K~~~~~~~~~~~^[m[K
+[01m[Ksortnums.cc:40:49:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar**[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   sort(nums.begin(), nums.end(), comp(&argv[1], [01;31m[K&argv[argc][m[K));
+                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[Ksortnums.cc:39:38:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kbool comp(const int&, const int&)[m[K’
+   bool comp(const int &a, [01;36m[Kconst int &b[m[K);
+                           [01;36m[K~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/8/bits/stl_algobase.h:71[m[K,
+                 from [01m[K/usr/include/c++/8/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/8/ios:40[m[K,
+                 from [01m[K/usr/include/c++/8/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[Ksortnums.cc:1[m[K:
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kconstexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Iterator2 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_algo.h:81:17:[m[K   required from ‘[01m[Kvoid std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1921:34:[m[K   required from ‘[01m[K_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1953:38:[m[K   required from ‘[01m[Kvoid std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1968:25:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:40:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:143:18:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+         { return [01;31m[Kbool(_M_comp(*__it1, *__it2))[m[K; }
+                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kbool __gnu_cxx::__ops::_Val_comp_iter<_Compare>::operator()(_Value&, _Iterator) [with _Value = int; _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1828:20:[m[K   required from ‘[01m[Kvoid std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1855:36:[m[K   required from ‘[01m[Kvoid std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1885:25:[m[K   required from ‘[01m[Kvoid std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1971:31:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:40:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:215:11:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+  { return [01;31m[Kbool(_M_comp(__val, *__it))[m[K; }
+           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kbool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Value = int; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_heap.h:133:48:[m[K   required from ‘[01m[Kvoid std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Distance = long int; _Tp = int; _Compare = __gnu_cxx::__ops::_Iter_comp_val<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_heap.h:237:23:[m[K   required from ‘[01m[Kvoid std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Distance = long int; _Tp = int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_heap.h:342:22:[m[K   required from ‘[01m[Kvoid std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1672:23:[m[K   required from ‘[01m[Kvoid std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1933:25:[m[K   required from ‘[01m[Kvoid std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1948:27:[m[K   required from ‘[01m[Kvoid std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1968:25:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:40:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:177:11:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+  { return [01;31m[Kbool(_M_comp(*__it, __val))[m[K; }
+           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:332241): Gtk-[1;33mWARNING[0m **: [34m13:50:42.147[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:43:39:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar**[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   sort(nums.begin(), nums.end(), comp([01;31m[K&argv[1][m[K, &argv[argc]));
+                                       [01;31m[K^~~~~~~~[m[K
+[01m[Ksortnums.cc:31:22:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool comp(const int&, const int&)[m[K’
+ bool comp([01;36m[Kconst int &a[m[K, const int &b)
+           [01;36m[K~~~~~~~~~~~^[m[K
+[01m[Ksortnums.cc:43:49:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar**[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   sort(nums.begin(), nums.end(), comp(&argv[1], [01;31m[K&argv[argc][m[K));
+                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[Ksortnums.cc:31:36:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kbool comp(const int&, const int&)[m[K’
+ bool comp(const int &a, [01;36m[Kconst int &b[m[K)
+                         [01;36m[K~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/8/bits/stl_algobase.h:71[m[K,
+                 from [01m[K/usr/include/c++/8/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/8/ios:40[m[K,
+                 from [01m[K/usr/include/c++/8/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/8/iostream:39[m[K,
+                 from [01m[Ksortnums.cc:1[m[K:
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kconstexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Iterator2 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_algo.h:81:17:[m[K   required from ‘[01m[Kvoid std::__move_median_to_first(_Iterator, _Iterator, _Iterator, _Iterator, _Compare) [with _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1921:34:[m[K   required from ‘[01m[K_RandomAccessIterator std::__unguarded_partition_pivot(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1953:38:[m[K   required from ‘[01m[Kvoid std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1968:25:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:43:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:143:18:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+         { return [01;31m[Kbool(_M_comp(*__it1, *__it2))[m[K; }
+                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kbool __gnu_cxx::__ops::_Val_comp_iter<_Compare>::operator()(_Value&, _Iterator) [with _Value = int; _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1828:20:[m[K   required from ‘[01m[Kvoid std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1855:36:[m[K   required from ‘[01m[Kvoid std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1885:25:[m[K   required from ‘[01m[Kvoid std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1971:31:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:43:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:215:11:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+  { return [01;31m[Kbool(_M_comp(__val, *__it))[m[K; }
+           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/c++/8/bits/predefined_ops.h: In instantiation of ‘[01m[Kbool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Value = int; _Compare = bool][m[K’:
+[01m[K/usr/include/c++/8/bits/stl_heap.h:133:48:[m[K   required from ‘[01m[Kvoid std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Distance = long int; _Tp = int; _Compare = __gnu_cxx::__ops::_Iter_comp_val<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_heap.h:237:23:[m[K   required from ‘[01m[Kvoid std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Distance = long int; _Tp = int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_heap.h:342:22:[m[K   required from ‘[01m[Kvoid std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1672:23:[m[K   required from ‘[01m[Kvoid std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1933:25:[m[K   required from ‘[01m[Kvoid std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1948:27:[m[K   required from ‘[01m[Kvoid std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:1968:25:[m[K   required from ‘[01m[Kvoid std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool>][m[K’
+[01m[K/usr/include/c++/8/bits/stl_algo.h:4866:18:[m[K   required from ‘[01m[Kvoid std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Compare = bool][m[K’
+[01m[Ksortnums.cc:43:61:[m[K   required from here
+[01m[K/usr/include/c++/8/bits/predefined_ops.h:177:11:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+  { return [01;31m[Kbool(_M_comp(*__it, __val))[m[K; }
+           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:332436): Gtk-[1;33mWARNING[0m **: [34m13:52:14.043[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:43:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kcomp[m[K’ was not declared in this scope
+   sort(nums.begin(), nums.end(), [01;31m[Kcomp[m[K());
+                                  [01;31m[K^~~~[m[K
+[01m[Ksortnums.cc:43:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcmp[m[K’
+   sort(nums.begin(), nums.end(), [01;36m[Kcomp[m[K());
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kcmp[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:332939): Gtk-[1;33mWARNING[0m **: [34m13:56:25.412[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:43:38:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kbool cmp(const int&, const int&)[m[K’
+   sort(nums.begin(), nums.end(), cmp([01;31m[K)[m[K);
+                                      [01;31m[K^[m[K
+[01m[Ksortnums.cc:31:6:[m[K [01;36m[Knote: [m[Kdeclared here
+ bool [01;36m[Kcmp[m[K(const int &a, const int &b)
+      [01;36m[K^~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:333118): Gtk-[1;33mWARNING[0m **: [34m13:57:59.919[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cmake -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+[01m[Ksortnums.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Ksortnums.cc:43:38:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kbool cmp(const int&, const int&)[m[K’
+   sort(nums.begin(), nums.end(), cmp([01;31m[K)[m[K);
+                                      [01;31m[K^[m[K
+[01m[Ksortnums.cc:31:6:[m[K [01;36m[Knote: [m[Kdeclared here
+ bool [01;36m[Kcmp[m[K(const int &a, const int &b)
+      [01;36m[K^~~[m[K
+make: *** [<builtin>: sortnums] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 5-nu mop[K[Kpaths
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ cd 5-numpaths[C[C[C[C[C[C[C..[Kgedit sortnums.cc[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    numpaths.cc   -o numpaths
+cat </dev/null >.gitignore
+for t in numpaths; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ numpaht[K[Kths ../data/*.dat
+bash: numpaths: command not found
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ numpaths ../data/*.dat[1@.[1@/
+>> 342
+342: ../data/4.dat ../data/8.dat 
+>> 324
+324: ../data/1.dat ../data/3.dat ../data/8.dat 
+>> 45
+45: NOT FOUND
+>> 234
+234: ../data/6.dat ../data/8.dat 
+>> rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ gedit numpaths/[K.cc
+
+(gedit:333683): Gtk-[1;33mWARNING[0m **: [34m14:07:51.756[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ gedit numpaths.cc[C[C[C[C./numpaths ../data/*.dat[C[C[C[C[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    numpaths.cc   -o numpaths
+[01m[Knumpaths.cc:[m[K In function ‘[01m[Kstd::map<std::set<std::__cxx11::basic_string<char> >, int> readNums(std::vector<std::__cxx11::basic_string<char> >)[m[K’:
+[01m[Knumpaths.cc:28:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::map<std::set<std::__cxx11::basic_string<char> >, int>::insert(int&)[m[K’
+     map.insert(sum[01;31m[K)[m[K;
+                   [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/8/map:61[m[K,
+                 from [01m[Knumpaths.cc:7[m[K:
+[01m[K/usr/include/c++/8/bits/stl_map.h:627:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type = std::_Node_insert_return<std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >, std::_Node_handle<std::set<std::__cxx11::basic_string<char> >, std::pair<const std::set<std::__cxx11::basic_string<char> >, int>, std::allocator<std::_Rb_tree_node<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> > > > >; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Node_handle<std::set<std::__cxx11::basic_string<char> >, std::pair<const std::set<std::__cxx11::basic_string<char> >, int>, std::allocator<std::_Rb_tree_node<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> > > >][m[K’
+       [01;36m[Kinsert[m[K(node_type&& __nh)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:627:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::map<std::set<std::__cxx11::basic_string<char> >, int>::node_type&&[m[K’ {aka ‘[01m[Kstd::_Node_handle<std::set<std::__cxx11::basic_string<char> >, std::pair<const std::set<std::__cxx11::basic_string<char> >, int>, std::allocator<std::_Rb_tree_node<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> > > >&&[m[K’}
+[01m[K/usr/include/c++/8/bits/stl_map.h:632:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Node_handle<std::set<std::__cxx11::basic_string<char> >, std::pair<const std::set<std::__cxx11::basic_string<char> >, int>, std::allocator<std::_Rb_tree_node<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> > > >][m[K’
+       [01;36m[Kinsert[m[K(const_iterator __hint, node_type&& __nh)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:632:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/8/bits/stl_map.h:801:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const value_type&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::set<std::__cxx11::basic_string<char> >, int>][m[K’
+       [01;36m[Kinsert[m[K(const value_type& __x)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:801:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst std::pair<const std::set<std::__cxx11::basic_string<char> >, int>&[m[K’}
+[01m[K/usr/include/c++/8/bits/stl_map.h:808:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::set<std::__cxx11::basic_string<char> >, int>][m[K’
+       [01;36m[Kinsert[m[K(value_type&& __x)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:808:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::map<std::set<std::__cxx11::basic_string<char> >, int>::value_type&&[m[K’ {aka ‘[01m[Kstd::pair<const std::set<std::__cxx11::basic_string<char> >, int>&&[m[K’}
+[01m[K/usr/include/c++/8/bits/stl_map.h:814:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> > std::map<_Key, _Tp, _Compare, _Alloc>::insert(_Pair&&) [with _Pair = _Pair; _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >][m[K’
+  [01;36m[Kinsert[m[K(_Pair&& __x)
+  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:814:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/8/bits/stl_map.h:828:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::initializer_list<std::pair<const _Key, _Tp> >) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >][m[K’
+       [01;36m[Kinsert[m[K(std::initializer_list<value_type> __list)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:828:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::initializer_list<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >[m[K’
+[01m[K/usr/include/c++/8/bits/stl_map.h:858:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, const value_type&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::set<std::__cxx11::basic_string<char> >, int>][m[K’
+       [01;36m[Kinsert[m[K(const_iterator __position, const value_type& __x)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:858:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/8/bits/stl_map.h:868:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::set<std::__cxx11::basic_string<char> >, int>][m[K’
+       [01;36m[Kinsert[m[K(const_iterator __position, value_type&& __x)
+       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:868:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/8/bits/stl_map.h:873:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<std::pair<const _Key, _Tp> >::other>::iterator> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, _Pair&&) [with _Pair = _Pair; _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >][m[K’
+  [01;36m[Kinsert[m[K(const_iterator __position, _Pair&& __x)
+  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:873:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[Knumpaths.cc:28:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+     map.insert(sum[01;36m[K)[m[K;
+                   [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/8/map:61[m[K,
+                 from [01m[Knumpaths.cc:7[m[K:
+[01m[K/usr/include/c++/8/bits/stl_map.h:891:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _InputIterator> void std::map<_Key, _Tp, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Key = std::set<std::__cxx11::basic_string<char> >; _Tp = int; _Compare = std::less<std::set<std::__cxx11::basic_string<char> > >; _Alloc = std::allocator<std::pair<const std::set<std::__cxx11::basic_string<char> >, int> >][m[K’
+  [01;36m[Kinsert[m[K(_InputIterator __first, _InputIterator __last)
+  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/8/bits/stl_map.h:891:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[Knumpaths.cc:28:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+     map.insert(sum[01;36m[K)[m[K;
+                   [01;36m[K^[m[K
+[01m[Knumpaths.cc:[m[K In function ‘[01m[Kvoid interact(const std::map<int, std::set<std::__cxx11::basic_string<char> > >&)[m[K’:
+[01m[Knumpaths.cc:51:12:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kint[m[K’
+       std::[01;31m[Kint[m[K totals = map.at(i);
+            [01;31m[K^~~[m[K
+[01m[Knumpaths.cc:52:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktotals[m[K’ was not declared in this scope
+       std::cout << i << ": " << [01;31m[Ktotals[m[K << std::endl;
+                                 [01;31m[K^~~~~~[m[K
+[01m[Knumpaths.cc:52:33:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktowctrans[m[K’
+       std::cout << i << ": " << [01;36m[Ktotals[m[K << std::endl;
+                                 [01;36m[K^~~~~~[m[K
+                                 [32m[Ktowctrans[m[K
+[01m[Knumpaths.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Knumpaths.cc:69:12:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::map<int, std::set<std::__cxx11::basic_string<char> > >&[m[K’ from expression of type ‘[01m[Kstd::map<std::set<std::__cxx11::basic_string<char> >, int>[m[K’
+   interact([01;31m[Kmap[m[K);
+            [01;31m[K^~~[m[K
+[01m[Knumpaths.cc:45:1:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid interact(const std::map<int, std::set<std::__cxx11::basic_string<char> > >&)[m[K’
+ [01;36m[Kinteract[m[K(const std::map<int, FileNames>& map)
+ [01;36m[K^~~~~~~~[m[K
+[01m[Knumpaths.cc:[m[K At global scope:
+[01m[Knumpaths.cc:38:1:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstd::ostream& operator<<(std::ostream&, const std::set<std::__cxx11::basic_string<char> >&)[m[K’ defined but not used [[01;35m[K-Wunused-function[m[K]
+ [01;35m[Koperator[m[K<<(std::ostream& out, const std::set<std::string>& set)
+ [01;35m[K^~~~~~~~[m[K
+make: *** [<builtin>: numpaths] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/5-numpaths$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd gree t-2
+bash: cd: greet-2: No such file or directory
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 2-gr eet
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ ls
+greet  greet.cc  README
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc
+
+(gedit:335021): Gtk-[1;33mWARNING[0m **: [34m14:22:29.929[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cls[Kcd 2-greet[C[C[C[Cgreet-2[C[C[C[C..[K[Cmake -f ../Makefile[C[2Pgedit numpaths.cc[C./numpaths ../data/*.dat[C[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pmake -f ../Makefile[C[6Pcd 5-numpaths[C[C[C[C..[K[Cgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[K[C./sortnums nums2.dat1.dat[K[K[Cmake -f ../Makefile[C[C[C[C[C[K[Cls -l[Ccd 4-sortnums[C[C[C[C..[K[C./greet abcdefghijklmnopqrstuvwxyz[C[C[C[C[C[C[C[C[C[11Pryanblazejewski[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart[C[9P./greet bart lisa[C[3Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[C./greet bart lisa[Cmake -f ../Makefile[C[9Pcd 3-greet[C[C[C[C..[K[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cls[Kcd 2-greet[C[C[C[Cgreet-2[C[C[C[C..[K[Cmake -f ../Makefile[C[2Pgedit numpaths.cc[C./numpaths ../data/*.dat[C[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pmake -f ../Makefile[C[6Pcd 5-numpaths[C[C[C[C..[K[Cgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[Cmake -f ../Makefile[C[2Pgedit sortnums.cc[K[C./sortnums nums2.dat1.dat[K[K[Cmake -f ../Makefile[C[C[C[C[C[K[Cls -l[Ccd 4-sortnums[C[C[C[C..[K[C./greet abcdefghijklmnopqrstuvwxyz[C[C[C[C[C[C[C[C[C[11Pryanblazejewski[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart[C[9P./greet bart lisa[Cvalgrind ./greet lisa bart
+==335953== Memcheck, a memory error detector
+==335953== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==335953== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==335953== Command: ./greet lisa bart
+==335953== 
+hello lisa
+==335953== Invalid free() / delete / delete[] / realloc()
+==335953==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==335953==    by 0x109335: main (greet.cc:26)
+==335953==  Address 0x1fff0006f0 is on thread 1's stack
+==335953== 
+hello bart
+==335953== 
+==335953== HEAP SUMMARY:
+==335953==     in use at exit: 22 bytes in 2 blocks
+==335953==   total heap usage: 4 allocs, 4 frees, 73,750 bytes allocated
+==335953== 
+==335953== LEAK SUMMARY:
+==335953==    definitely lost: 22 bytes in 2 blocks
+==335953==    indirectly lost: 0 bytes in 0 blocks
+==335953==      possibly lost: 0 bytes in 0 blocks
+==335953==    still reachable: 0 bytes in 0 blocks
+==335953==         suppressed: 0 bytes in 0 blocks
+==335953== Rerun with --leak-check=full to see details of leaked memory
+==335953== 
+==335953== For counts of detected and suppressed errors, rerun with: -v
+==335953== ERROR SUMMARY: 2 errors from 1 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:336035): Gtk-[1;33mWARNING[0m **: [34m14:23:46.358[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kconst char* greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:13:11:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[Kchar[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+ delete[] *[01;31m[Kmsg[m[K;
+           [01;31m[K^~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[Kmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart[C[12Pgedit greet.cc
+
+(gedit:336101): Gtk-[1;33mWARNING[0m **: [34m14:24:18.882[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==336215== Memcheck, a memory error detector
+==336215== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==336215== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==336215== Command: ./greet lisa bart
+==336215== 
+hello lisa
+==336215== Invalid free() / delete / delete[] / realloc()
+==336215==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336215==    by 0x10933B: main (greet.cc:26)
+==336215==  Address 0x1fff0009db is on thread 1's stack
+==336215== 
+hello bart
+==336215== 
+==336215== HEAP SUMMARY:
+==336215==     in use at exit: 22 bytes in 2 blocks
+==336215==   total heap usage: 4 allocs, 4 frees, 73,750 bytes allocated
+==336215== 
+==336215== LEAK SUMMARY:
+==336215==    definitely lost: 22 bytes in 2 blocks
+==336215==    indirectly lost: 0 bytes in 0 blocks
+==336215==      possibly lost: 0 bytes in 0 blocks
+==336215==    still reachable: 0 bytes in 0 blocks
+==336215==         suppressed: 0 bytes in 0 blocks
+==336215== Rerun with --leak-check=full to see details of leaked memory
+==336215== 
+==336215== For counts of detected and suppressed errors, rerun with: -v
+==336215== ERROR SUMMARY: 2 errors from 1 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:336284): Gtk-[1;33mWARNING[0m **: [34m14:25:51.192[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kconst char* greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:15:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessgae[m[K’ was not declared in this scope
+   return [01;31m[Kmessgae[m[K;
+          [01;31m[K^~~~~~~[m[K
+[01m[Kgreet.cc:15:10:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmessage[m[K’
+   return [01;36m[Kmessgae[m[K;
+          [01;36m[K^~~~~~~[m[K
+          [32m[Kmessage[m[K
+[01m[Kgreet.cc:13:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmessage[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   const char* [01;35m[Kmessage[m[K = msg;
+               [01;35m[K^~~~~~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:336370): Gtk-[1;33mWARNING[0m **: [34m14:26:29.994[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cvalgrind ./greet lisa bart
+==336413== Memcheck, a memory error detector
+==336413== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==336413== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==336413== Command: ./greet lisa bart
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x4838CC2: __strlen_sse2 (vg_replace_strmem.c:462)
+==336413==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x4838CD4: __strlen_sse2 (vg_replace_strmem.c:462)
+==336413==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d74c81 is 1 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x4C1A847: _IO_default_xsputn (genops.c:399)
+==336413==    by 0x4C1A847: _IO_default_xsputn (genops.c:370)
+==336413==    by 0x4C18AD0: _IO_new_file_xsputn (fileops.c:1272)
+==336413==    by 0x4C18AD0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336413==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336413==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+hello lisa
+==336413== Invalid free() / delete / delete[] / realloc()
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109356: main (greet.cc:28)
+==336413==  Address 0x1fff0009db is on thread 1's stack
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x4C18A25: _IO_new_file_xsputn (fileops.c:1226)
+==336413==    by 0x4C18A25: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336413==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336413==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d75119 is 9 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x4C18A3C: _IO_new_file_xsputn (fileops.c:1226)
+==336413==    by 0x4C18A3C: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336413==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336413==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d75118 is 8 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x483D528: mempcpy (vg_replace_strmem.c:1536)
+==336413==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==336413==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336413==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336413==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d75110 is 0 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+==336413== Invalid read of size 1
+==336413==    at 0x483D536: mempcpy (vg_replace_strmem.c:1536)
+==336413==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==336413==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336413==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336413==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336413==    by 0x109306: main (greet.cc:27)
+==336413==  Address 0x4d75112 is 2 bytes inside a block of size 11 free'd
+==336413==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336413==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413==  Block was alloc'd at
+==336413==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336413==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336413==    by 0x1092F7: main (greet.cc:27)
+==336413== 
+hello bart
+==336413== 
+==336413== HEAP SUMMARY:
+==336413==     in use at exit: 0 bytes in 0 blocks
+==336413==   total heap usage: 4 allocs, 6 frees, 73,750 bytes allocated
+==336413== 
+==336413== All heap blocks were freed -- no leaks are possible
+==336413== 
+==336413== For counts of detected and suppressed errors, rerun with: -v
+==336413== ERROR SUMMARY: 54 errors from 8 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ valgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[Cvalgrind ./greet lisa bart[C[K./greet bart lisa
+
+munmap_chunk(): invalid pointer
+Aborted
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ ./greet bart lisa[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:336529): Gtk-[1;33mWARNING[0m **: [34m14:27:47.651[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[C./greet bart lisa[Cvalgrind ./greet lisa bart[C[7Pmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+[01m[Kgreet.cc:[m[K In function ‘[01m[Kconst char* greetMsg(const char*)[m[K’:
+[01m[Kgreet.cc:13:18:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar*[m[K’ to ‘[01m[Kchar[m[K’ [[01;31m[K-fpermissive[m[K]
+   char message = [01;31m[Kmsg[m[K;
+                  [01;31m[K^~~[m[K
+[01m[Kgreet.cc:15:10:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar[m[K’ to ‘[01m[Kconst char*[m[K’ [[01;31m[K-fpermissive[m[K]
+   return [01;31m[Kmessage[m[K;
+          [01;31m[K^~~~~~~[m[K
+make: *** [<builtin>: greet] Error 1
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc
+
+(gedit:336590): Gtk-[1;33mWARNING[0m **: [34m14:28:18.609[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ gedit greet.cc[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    greet.cc   -o greet
+cat </dev/null >.gitignore
+for t in greet; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ make -f ../Makefile[C[5Pgedit greet.cc[Cmake -f ../Makefile[C[5Pgedit greet.cc[C./greet bart lisa[Cvalgrind ./greet lisa bart
+==336633== Memcheck, a memory error detector
+==336633== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==336633== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==336633== Command: ./greet lisa bart
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x4838CC2: __strlen_sse2 (vg_replace_strmem.c:462)
+==336633==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x4838CD4: __strlen_sse2 (vg_replace_strmem.c:462)
+==336633==    by 0x4989E38: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d74c81 is 1 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x4C1A847: _IO_default_xsputn (genops.c:399)
+==336633==    by 0x4C1A847: _IO_default_xsputn (genops.c:370)
+==336633==    by 0x4C18AD0: _IO_new_file_xsputn (fileops.c:1272)
+==336633==    by 0x4C18AD0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336633==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336633==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d74c80 is 0 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+hello lisa
+==336633== Invalid free() / delete / delete[] / realloc()
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109356: main (greet.cc:28)
+==336633==  Address 0x1fff0009db is on thread 1's stack
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x4C18A25: _IO_new_file_xsputn (fileops.c:1226)
+==336633==    by 0x4C18A25: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336633==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336633==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d75119 is 9 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x4C18A3C: _IO_new_file_xsputn (fileops.c:1226)
+==336633==    by 0x4C18A3C: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336633==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336633==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d75118 is 8 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x483D528: mempcpy (vg_replace_strmem.c:1536)
+==336633==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==336633==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336633==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336633==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d75110 is 0 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+==336633== Invalid read of size 1
+==336633==    at 0x483D536: mempcpy (vg_replace_strmem.c:1536)
+==336633==    by 0x4C189E4: _IO_new_file_xsputn (fileops.c:1243)
+==336633==    by 0x4C189E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1204)
+==336633==    by 0x4C0DAE7: fwrite (iofwrite.c:39)
+==336633==    by 0x4989B33: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x4989E46: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==336633==    by 0x109306: main (greet.cc:27)
+==336633==  Address 0x4d75112 is 2 bytes inside a block of size 11 free'd
+==336633==    at 0x483758B: operator delete[](void*) (vg_replace_malloc.c:641)
+==336633==    by 0x109254: greetMsg(char const*) (greet.cc:14)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633==  Block was alloc'd at
+==336633==    at 0x483650F: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==336633==    by 0x1091E4: greetMsg(char const*) (greet.cc:11)
+==336633==    by 0x1092F7: main (greet.cc:27)
+==336633== 
+hello bart
+==336633== 
+==336633== HEAP SUMMARY:
+==336633==     in use at exit: 0 bytes in 0 blocks
+==336633==   total heap usage: 4 allocs, 6 frees, 73,750 bytes allocated
+==336633== 
+==336633== All heap blocks were freed -- no leaks are possible
+==336633== 
+==336633== For counts of detected and suppressed errors, rerun with: -v
+==336633== ERROR SUMMARY: 54 errors from 8 contexts (suppressed: 0 from 0)
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/2-greet$ cd ..
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises$ cd 4-so rtnums
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ls -l
+total 280
+-rw-r--r-- 1 rblazej1 rblazej1     82 Feb 13 13:13 nums1.dat
+-rw-r--r-- 1 rblazej1 rblazej1    109 Feb 13 13:13 nums2.dat
+-rwxr-xr-x 1 rblazej1 rblazej1 271296 Feb 13 13:42 sortnums
+-rw-r--r-- 1 rblazej1 rblazej1   1062 Feb 13 14:00 sortnums.cc
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc
+
+(gedit:336956): Gtk-[1;33mWARNING[0m **: [34m14:34:13.608[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[Cls -l[Kgedit sortnums.cc[C[C[C[C[K./[K[Kmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+cat </dev/null >.gitignore
+for t in sortnums; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums *.dat
+10
+10
+10
+20
+20
+20
+30
+30
+30
+40
+40
+40
+50
+50
+50
+60
+60
+60
+70
+70
+70
+80
+80
+80
+90
+90
+90
+100
+100
+100
+200
+200
+200
+300
+300
+300
+400
+400
+400
+500
+500
+500
+600
+600
+600
+700
+700
+700
+800
+800
+800
+900
+900
+900
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums *.datn*.datu*.datm*.dats*.dat1*.dat
+10
+10
+10
+20
+20
+20
+30
+30
+30
+40
+40
+40
+50
+50
+50
+60
+60
+60
+70
+70
+70
+80
+80
+80
+90
+90
+90
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums nums1*.dat[5P*.dat[C[C[C[Cmake -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:337780): Gtk-[1;33mWARNING[0m **: [34m14:38:46.264[0m: Calling org.xfce.Session.Manager.Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Method "Inhibit" with signature "susu" on interface "org.xfce.Session.Manager" doesn't exist
+
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ gedit sortnums.cc[C[C[C[C./sortnums nums1*.dat[5P*.dat[C[C[C[Cmake -f ../Makefile
+g++ -g -Wall -std=c++17    sortnums.cc   -o sortnums
+cat </dev/null >.gitignore
+for t in sortnums; do echo $t >>.gitignore; done
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ make -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc[C[C[C[C./sortnums nums1*.dat[5P*.dat
+100
+10
+300
+40
+400
+80
+200
+50
+800
+70
+40
+20
+80
+90
+50
+60
+70
+10
+30
+40
+20
+80
+90
+50
+60
+70
+30
+20
+90
+60
+10
+900
+500
+600
+700
+100
+300
+400
+200
+800
+900
+500
+600
+700
+100
+300
+400
+200
+800
+900
+500
+600
+700
+30
+rblazej1@g7-06:/import/linux/home1/rblazej1/i240a/submit/lab3/exercises/4-sortnums$ ./sortnums *.dat[C[C[C[Cmake -f ../Makefile[C[C[C[C[2Pgedit sortnums.cc
+
+(gedit:337853): Gtk-[1;33mWARNING[0m **: [34m14
